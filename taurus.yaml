@@ -10,5 +10,5 @@ reporting:
 - module: final-stats
 - module: passfail
   criteria:
-  - "avg-rt>0.25s for 1s, continue as non-failed"
+  - "avg-rt>0.25s for 1s, stop as non-failed"
   - "fail>5% for 1s, stop as failed"
