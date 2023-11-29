@@ -2,13 +2,8 @@ node {
 	stage('Build') {
 	}
 	stage('Performance Tests') {
-	parallel {
-		JMeterTest: {
-			bat 'bzt taurus.yaml -report'
-		},
-		Analysis: {
-			sleep 60
-		}
+		JMeterTestviaTaurus: {
+			sh 'bzt taurus.yaml -report'
 	}}
 	stage('Deploy') {
 	}	
