@@ -6,6 +6,8 @@ scenarios:
     script: internet-serwis-cabp.jmx
     
 reporting:
+- module: console
+- module: final-stats
 - module: passfail
   criteria:
   - "avg-rt>20s for 30s, continue as warning"
