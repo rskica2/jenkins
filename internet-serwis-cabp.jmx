@@ -65,9 +65,6 @@
         <stringProp name="HTTPSampler.contentEncoding"></stringProp>
         <stringProp name="HTTPSampler.path"></stringProp>
         <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
-        <stringProp name="HTTPSampler.proxyScheme">http</stringProp>
-        <stringProp name="HTTPSampler.proxyHost">proxy.creditagricole</stringProp>
-        <stringProp name="HTTPSampler.proxyPort">8080</stringProp>
         <stringProp name="HTTPSampler.connect_timeout"></stringProp>
         <stringProp name="HTTPSampler.response_timeout"></stringProp>
       </ConfigTestElement>
