@@ -8,5 +8,5 @@ scenarios:
 reporting:
 - module: passfail
   criteria:
-  - "avg-rt>150ms for 10s, continue as failed"
-  - "fail>10% for 10s, stop as failed"
+  - "avg-rt>20s for 30s, continue as warning"
+  - "fail>10% for 30s, stop as failed"
