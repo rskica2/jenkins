@@ -6,12 +6,6 @@ scenarios:
     script: internet-serwis-cabp.jmx
     
 reporting:
-- module: final-stats
-  summary: true
-  percentiles: true 
-  failed-labels: false
-  test-duration: true
-  dump-csv: perf_result_csv.csv
 - module: passfail
   criteria:
   - "avg-rt>10s for 10s, stop as failed"
