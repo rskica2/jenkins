@@ -1,4 +1,4 @@
-anode {
+node {
   environment {
     ENV = "${params.env}"
   }
