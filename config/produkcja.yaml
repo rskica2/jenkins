@@ -1,6 +1,7 @@
 execution:
 - concurrency: ${__P(threadNumber)}
   hold-for: ${__P(duration)}
+  ramp-up: 15s
   scenario: simple  
 
 scenarios:
