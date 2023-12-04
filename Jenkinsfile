@@ -11,7 +11,10 @@ node {
   	sh "mv config/${env.ENV}.yaml taurus.yaml" // move the selected environment configuration to config.yaml
 	JMeterTestviaTaurus: {
 		sh "bzt -o modules.jmeter.properties.threadNumber=${env.threadNumber} -o modules.jmeter.properties.duration=${env.duration} /var/lib/jenkins/workspace/taurus-github-poc/taurus.yaml"
-	}}
+	}
+        // archive artifacts only from the application directory
+        archiveArtifacts artifacts: "**/*.*", fingerprint: true  
+  }
   stage('Deploy') {
   }		
 }
