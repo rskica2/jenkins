@@ -12,7 +12,6 @@ anode {
 		sh "mv config/${env.ENV}.yaml taurus.yaml" // move the selected environment configuration to config.yaml
 		JMeterTestviaTaurus: {
 			sh 'bzt -o scenario.simple.properties.threadNumber=${env.threadNumber} /var/lib/jenkins/workspace/taurus-github-poc/taurus.yaml'
-			// bzt -o scenarios.sample.data-sources.0=data.csv xxx.yaml
 		}}
 	stage('Deploy') {
 	}		
