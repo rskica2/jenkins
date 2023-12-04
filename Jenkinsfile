@@ -14,7 +14,7 @@ node {
     always {
       dir(TaurusResult) {
         // archive artifacts only from the given directory
-        archiveArtifacts artifacts: "TaurusResult/*.*", fingerprint: true
+        archiveArtifacts artifacts: "**/*.*", fingerprint: true
       }
     }
   }
