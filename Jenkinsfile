@@ -9,14 +9,5 @@ node {
 			sh 'bzt /var/lib/jenkins/workspace/taurus-github-poc/taurus.yaml'
 		}}
 	stage('Deploy') {
-	}	
-  post {
-    always {
-      dir(TaurusResult) {
-        // archive artifacts only from the given directory
-        archiveArtifacts artifacts: "**/*.*", fingerprint: true
-      }
-    }
-  }
-	
+	}		
 }
