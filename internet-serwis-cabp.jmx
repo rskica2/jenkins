@@ -99,7 +99,7 @@
           <intProp name="LoopController.loops">-1</intProp>
         </elementProp>
         <stringProp name="ThreadGroup.num_threads">${__P(threadNumber)}</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">${__P(ramp-up)}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
         <stringProp name="ThreadGroup.duration">${__P(duration)}</stringProp>
         <stringProp name="ThreadGroup.delay">0</stringProp>
@@ -135,6 +135,15 @@
             </ConstantTimer>
             <hashTree/>
           </hashTree>
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor" enabled="true">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">String duration = vers.get(&quot;duration&quot;);
+log.info(&quot;duration=&quot; + duration);</stringProp>
+            <stringProp name="scriptLanguage">java</stringProp>
+          </JSR223PostProcessor>
+          <hashTree/>
         </hashTree>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Kredyty" enabled="true">
           <boolProp name="TransactionController.includeTimers">false</boolProp>
