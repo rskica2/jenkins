@@ -13,7 +13,7 @@ node {
 		sh "bzt -o modules.jmeter.properties.threadNumber=${env.threadNumber} -o modules.jmeter.properties.duration=${env.duration} /var/lib/jenkins/workspace/taurus-github-poc/taurus.yaml"
 	}
         // archive artifacts only from the application directory
-        archiveArtifacts artifacts: "TaurusResult/*.*", fingerprint: true  
+        archiveArtifacts artifacts: "**/TaurusResult/*.*", fingerprint: true  
 	// perfReport "kpi.jtl"  
   }
   stage('Deploy') {
