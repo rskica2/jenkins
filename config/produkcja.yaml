@@ -1,6 +1,6 @@
 execution:
-- threadNumber: ${__P(threadNumber)}
-  duration: ${__P(duration)}
+- concurrency: ${__P(threadNumber)}
+  hold-for: ${__P(duration)}
   scenario: simple  
 
 scenarios:
