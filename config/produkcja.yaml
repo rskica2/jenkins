@@ -9,7 +9,6 @@ scenarios:
     script: internet-serwis-cabp.jmx
     
 reporting:
-- module: console
 - module: final-stats
   summary: true
   percentiles: true 
