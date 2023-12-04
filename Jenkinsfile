@@ -1,6 +1,6 @@
-node {
+anode {
   environment {
-    ENV = "${params.env}".toLowerCase()
+    ENV = "${params.env}"
   }
 
     stage('Clone sources') {
@@ -11,7 +11,8 @@ node {
 	stage('Performance tests') {
 		sh "mv config/${env.ENV}.yaml taurus.yaml" // move the selected environment configuration to config.yaml
 		JMeterTestviaTaurus: {
-			sh 'bzt /var/lib/jenkins/workspace/taurus-github-poc/taurus.yaml -o modules.jmeter.properties.threadNumber=${env.threadNumber}'
+			sh 'bzt -o scenario.simple.properties.threadNumber=${env.threadNumber} /var/lib/jenkins/workspace/taurus-github-poc/taurus.yaml'
+			// bzt -o scenarios.sample.data-sources.0=data.csv xxx.yaml
 		}}
 	stage('Deploy') {
 	}		
