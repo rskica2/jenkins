@@ -16,3 +16,8 @@ reporting:
   criteria:
   - "avg-rt>10s for 10s, stop as failed"
   - "fail>3% for 10s, stop as failed"
+- module: junit-xml
+  data-source: pass-fail
+  filename: TaurusResult/junit-result-passfail.xml
+- module: junit-xml
+  filename: TaurusResult/junit-result.xml
