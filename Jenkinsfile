@@ -14,7 +14,7 @@ node {
 	}
         // archive artifacts only from the application directory
         // archiveArtifacts artifacts: "**/TaurusResult/*.*", fingerprint: true  
-	perfReport "perf_result_csv.csv, junit-result-passfail.xml"  
+	perfReport "junit-result.xml, junit-result-passfail.xml"  
   }
   stage('Deploy') {
   }		
