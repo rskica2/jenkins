@@ -14,6 +14,7 @@ node {
 	}
         // archive artifacts only from the application directory
         archiveArtifacts artifacts: "**/*.*", fingerprint: true  
+	perfReport "kpi.jtl"  
   }
   stage('Deploy') {
   }		
