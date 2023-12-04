@@ -14,8 +14,7 @@ node {
 	}
         // archive artifacts only from the application directory
         // archiveArtifacts artifacts: "**/TaurusResult/*.*", fingerprint: true  
-	perfReport "internet-serwis-cabp.jtl" 
-	perfReport "junit-result-passfail.xml"
+	perfReport "internet-serwis-cabp.jtl, junit-result-passfail.xml, junit-result.xml" 
 	// performanceReport parsers: [[$class: 'JMeterParser', glob: "jmeter_scripts\\${jmeterTestFile}_results.jtl"]], relativeFailedThresholdNegative: 1.2, relativeFailedThresholdPositive: 1.89, relativeUnstableThresholdNegative: 1.8, relativeUnstableThresholdPositive: 1.5
   }
   stage('Deploy') {
