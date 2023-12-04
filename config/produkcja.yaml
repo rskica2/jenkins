@@ -1,5 +1,7 @@
 execution:
-- scenario: simple
+- threadNumber: ${__P(threadNumber,1)}
+  scenario: simple
+  
 
 scenarios:
   simple:
