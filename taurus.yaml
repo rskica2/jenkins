@@ -8,7 +8,15 @@ scenarios:
 reporting:
 - module: console
 - module: final-stats
+  summary: true
+  percentiles: true 
+  failed-labels: false
+  test-duration: true
+  dump-csv: TaurusResult/perf_result_csv.csv
 - module: passfail
   criteria:
   - "avg-rt>1s for 1s, stop as failed"
   - "fail>3% for 1s, stop as failed"
+- module: junit-xml
+  data-source: pass-fail
+  filename: TaurusResult/junit-result.xml
