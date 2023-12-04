@@ -6,7 +6,7 @@ node {
 	}
 	stage('Performance tests') {
 		JMeterTestviaTaurus: {
-			sh 'bzt /var/lib/jenkins/workspace/taurus-github-poc/taurus.yaml'
+			sh 'bzt /var/lib/jenkins/workspace/taurus-github-poc/taurus.yaml -report'
 		}}
 	stage('Deploy') {
 	}	
