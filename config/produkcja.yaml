@@ -1,5 +1,5 @@
 execution:
-- threadNumber: ${__P(threadNumber,1)}
+- threadNumber: ${__P(threadNumber)}
   scenario: simple
   
 
