@@ -10,4 +10,13 @@ node {
 		}}
 	stage('Deploy') {
 	}	
+  post {
+    always {
+      dir(TaurusResult) {
+        // archive artifacts only from the given directory
+        archiveArtifacts artifacts: "TaurusResult/*.*", fingerprint: true
+      }
+    }
+  }
+	
 }
