@@ -1,7 +1,8 @@
 execution:
 - threadNumber: ${__P(threadNumber)}
-  scenario: simple
-  
+  duration: ${__P(duration)}
+  ramp-up: ${__P(ramp-up)}
+  scenario: simple  
 
 scenarios:
   simple:
