@@ -10,8 +10,3 @@ reporting:
   criteria:
   - "avg-rt>0.25s for 1s, stop as failed"
   - "fail>3% for 10s, stop as failed"
-- module: junit-xml
-  data-source: pass-fail
-  filename: junit-result-passfail.xml
-- module: junit-xml
-  filename: junit-result.xml
