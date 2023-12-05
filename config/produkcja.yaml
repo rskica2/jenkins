@@ -6,7 +6,18 @@ scenarios:
     script: internet-serwis-cabp.jmx
     
 reporting:
+- module: final-stats
+  summary: true  # overall samples count and percent of failures
+  percentiles: true  # display average times and percentiles
+  failed-labels: false  # provides list of sample labels with failures
+  test-duration: true  # provides test duration
+  dump-csv: perf_result_csv.csv
 - module: passfail
   criteria:
   - "avg-rt>1s for 3s, stop as failed"
   - "fail>3% for 10s, stop as failed"
+- module: junit-xml
+  data-source: pass-fail
+  filename: junit-result-passfail.xml
+- module: junit-xml
+  filename: junit-result.xml
