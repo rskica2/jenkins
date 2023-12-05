@@ -3,7 +3,7 @@ node {
 	ENV = "${params.env}"
   }	
   stage('Clone sources for Performance test') {
-	step([$class: 'WsCleanup'])	  
+	// step([$class: 'WsCleanup'])	  
   	git url: 'https://github.com/rskica2/jenkins.git'
   }
   stage('Build') {
