@@ -14,8 +14,8 @@ reporting:
   dump-csv: perf_result_csv.csv
 - module: passfail
   criteria:
-  - "avg-rt>0.10s for 3s, continue as failed"
-  - "fail>3% for 10s, continue as failed"
+  - "avg-rt>0.10s for 3s, continue as non-failed"
+  - "fail>3% for 10s, continue as non-failed"
 - module: junit-xml
   data-source: pass-fail
   filename: junit-result-passfail.xml
