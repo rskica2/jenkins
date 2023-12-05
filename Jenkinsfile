@@ -13,7 +13,7 @@ node {
 		sh "bzt -o modules.jmeter.properties.threadNumber=${env.threadNumber} -o modules.jmeter.properties.duration=${env.duration} /var/lib/jenkins/workspace/taurus-github-poc/taurus.yaml"
 	}
         // archive artifacts only from the application directory
-        // archiveArtifacts artifacts: "**/TaurusResult/*.*", fingerprint: true  
+        archiveArtifacts artifacts: "**/*.*", fingerprint: true  
 	perfReport "internet-serwis-cabp.jtl" 
 	// performanceReport parsers: [[$class: 'JMeterParser', glob: "jmeter_scripts\\${jmeterTestFile}_results.jtl"]], relativeFailedThresholdNegative: 1.2, relativeFailedThresholdPositive: 1.89, relativeUnstableThresholdNegative: 1.8, relativeUnstableThresholdPositive: 1.5
   }
