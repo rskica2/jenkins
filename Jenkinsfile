@@ -3,10 +3,10 @@ node {
 	ENV = "${params.env}"
   }	
   stage('Clone sources for Performance test') {
+	step([$class: 'WsCleanup'])	  
   	git url: 'https://github.com/rskica2/jenkins.git'
   }
   stage('Build') {
-	  step([$class: 'WsCleanup'])
   }	
   stage('Performance tests') { 
   	sh "mv config/${env.ENV}.yaml taurus.yaml" // move the selected environment configuration to config.yaml
